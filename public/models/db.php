@@ -2,11 +2,7 @@
 /*
 задаем константы отвечающие за подключение, но лучше их вынести в отдельный файл
 */
-define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'data');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_CHAR', 'utf8');
+require($_SERVER["DOCUMENT_ROOT"]."/const/const.php");
 
 class DB
 {
