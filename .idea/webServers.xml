@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7530c847-2f7b-4898-bcfd-86b7d72bbd3a" name="123">
+        <fileTransfer port="0" mountedRoot="D:\Program\OSPanel\domains\abc" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
