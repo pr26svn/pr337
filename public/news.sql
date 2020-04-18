@@ -12,8 +12,8 @@ CREATE TABLE `news` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `news` (`id`, `name`) VALUES
-(8, 'be carefull'),
-(9, 'ashes one\r\n');
+(6, 'daijobudesuka'),
+(3, 'Kiiro63');
 
 ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
