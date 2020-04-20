@@ -1,11 +1,12 @@
 <?php
     require($_SERVER["DOCUMENT_ROOT"]."/models/DB.php");
     require($_SERVER["DOCUMENT_ROOT"]."/controllers/news.php");
-    $newsList=news::getList();
 
     if ($_GET["id"] != 0):
         news::delete_news($_GET["id"]);
     endif;
+
+    $newsList=news::getList();
 ?>
 
 <table>
