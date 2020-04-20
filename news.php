@@ -16,6 +16,7 @@ endif;
             <td><?=$arNews["id"];?></td>
             <td><?=$arNews["name"];?></td>
             <td><a href="?id=<?=$arNews["id"];?>">Удалить</a><br/>
+                <a href="/editNews.php?id=<?=$arNews["id"];?>">Изменить</a>
             </td>
         </tr>
     <?php endforeach;?>
