@@ -1,0 +1,33 @@
+*{
+	font-family: sans-serif;
+}
+body{
+	width: 400px;
+}
+input, textarea, button{
+	padding: 7px;
+	resize: none;
+	width: 400px;
+}
+.block{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+}
+.id{
+	display: flex;
+	flex-direction: row;
+	float: right;
+}
+.id > input{
+	padding: 0;
+	width: 10px;
+}
+.block > textarea{
+	height: 200px;
+}
+
+#back{
+	margin-top: 10px;
+
+}

@@ -8,17 +8,26 @@
 
     $newsList=news::getList();
 ?>
-
-<table>
-    <tr><td>ID</td><td>Название новости</td><td>Действия</td></tr>
-    <?php foreach($newsList as $arNews):
-            $arr[] = $arNews['id']?>
-        <tr>
-            <td><?=$arNews["id"];?></td>
-            <td><?=$arNews["name"];?></td>
-            <td><a href="?id=<?=$arNews["id"];?>">Удалить</a><br/>
-<!--                <a href="/editNews.php?id=--><?//=$arNews["id"];?><!--">Изменить</a>-->
-            </td>
-        </tr>
-    <?php endforeach;?>
-</table>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Новости</title>
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+    </head>
+    <body>
+        <table>
+            <tr><td>ID</td><td>Название новости</td><td colspan="2">Действия</td></tr>
+            <?php foreach($newsList as $arNews):
+                    $arr[] = $arNews['id']?>
+                <tr>
+                    <td><?=$arNews["id"];?></td>
+                    <td><?=$arNews["name"];?></td>
+                    <td><a href="?id=<?=$arNews["id"];?>">Удалить</a><br/>
+                    <td> <a href="/editNews.php?id=<?=$arNews["id"];?>">Изменить</a>
+                    </td>
+                </tr>
+            <?php endforeach;?>
+        </table>
+    </body>
+</html>

@@ -8,8 +8,10 @@ class news
         $all = DB::run("SELECT id, name FROM news")->fetchAll();
         return $all;
     }
-
-    public static function delete_news($id){
+    /*
+     удаляем конкретную новость по ее id
+     */
+    Public static function delete_news($id){
         $del = DB::run("DELETE FROM news WHERE id=?", array($id));
     }
 
@@ -20,5 +22,10 @@ class news
         $row = DB::run("SELECT * FROM news WHERE id=?", array($id))->fetch();
         return $row ;
     }
-
+    /*
+     редактируем сожержимое по ее id
+     */
+    Public static function update($id,$name,$text){
+        DB::run("UPDATE news SET name = ?, text = ? where id = ?",array($name,$text,$id));
+    }
 }
