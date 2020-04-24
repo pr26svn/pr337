@@ -1,9 +1,8 @@
 <?php
-	
+    require($_SERVER["DOCUMENT_ROOT"] . "/models/DB.php");
+    require($_SERVER["DOCUMENT_ROOT"] . "/controllers/news.php");
 
 	if($_SERVER["REQUEST_METHOD"] == "GET") {
-require($_SERVER["DOCUMENT_ROOT"] . "/models/DB.php");
-	require($_SERVER["DOCUMENT_ROOT"] . "/controllers/news.php");
 	    $id = $_GET['id'];
 	    $getById = news::getByID($id);
 
@@ -12,8 +11,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/models/DB.php");
 	        header("Location: news.php");
 	        exit();
 	    }
-require($_SERVER["DOCUMENT_ROOT"] . "/models/DB.php");
-	require($_SERVER["DOCUMENT_ROOT"] . "/controllers/news.php");	    $id = $_POST['id'];
+        $id = $_POST['id'];
 	    news::update($id,$_POST['name'],$_POST['text']);
 	    header("Location: news.php");
 	}
